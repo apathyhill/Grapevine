@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{ data.user.display_name }}</h1>
+        <h2>{{ data.user.username }}</h2>
+        <img src="{{ data.user.avatar_url }}">
+
+        {% for post in data.posts %}
+            <h3>{{ post.author.username }}</h3>
+            <p>{{ post.text }}</p>
+        {% endfor %}
+    </body>
+</html>
